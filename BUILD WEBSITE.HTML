@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Fest 2025</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 20px;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    video, audio {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎉 <i>College Fest 2025</i> 🎉</h1>
+    <p><b>Date:</b> March 15-17, 2025 | <b>Location:</b> <u>City Campus Auditorium</u></p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('schedule')">Schedule</a>
+    <a href="#" onclick="showSection('register')">Registration</a>
+    <a href="#" onclick="showSection('gallery')">Gallery</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="active">
+    <h2>Welcome to <i>College Fest 2025</i></h2>
+    <p>
+      Join us for <b>College Fest 2025</b> — three days of <i>innovation, talent, and celebration</i> at the <u>City Campus</u>!
+    </p>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule">
+    <h2>📅 Event Schedule</h2>
+    <table>
+      <tr>
+        <th>Time</th>
+        <th>Activity</th>
+        <th>Venue</th>
+      </tr>
+      <tr>
+        <td>9:00 AM - 10:00 AM</td>
+        <td>Opening Ceremony</td>
+        <td>Main Auditorium</td>
+      </tr>
+      <tr>
+        <td>10:15 AM - 12:00 PM</td>
+        <td>Tech Talk</td>
+        <td>Hall A</td>
+      </tr>
+      <tr>
+        <td colspan="3"><b>🌟 Special Workshop: AI & Future (12:00 - 2:00 PM)</b></td>
+      </tr>
+      <tr>
+        <td>2:15 PM - 4:00 PM</td>
+        <td>Cultural Show</td>
+        <td>Open Stage</td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- Registration Section -->
+  <section id="register">
+    <h2>📝 Register Now</h2>
+    <form onsubmit="return submitForm(event)">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+
+      <label>Choose Category:</label>
+      <select name="category">
+        <option>Attendee</option>
+        <option>Speaker</option>
+        <option>Volunteer</option>
+      </select>
+
+      <label>Payment Method:</label>
+      <input type="radio" name="payment" value="Online"> Online
+      <input type="radio" name="payment" value="Offline"> Offline
+
+      <label>
+        <input type="checkbox" required> I agree to the terms and conditions
+      </label>
+
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>📸 Event Gallery</h2>
+    <div class="gallery">
+      <audio controls>
+        <source src="audio/highlights2024.mp3" type="audio/mp3">
+        Your browser doesn't support audio playback.
+      </audio>
+
+      <video width="600" controls poster="media/poster.jpg">
+        <source src="video/highlight2024.mp4" type="video/mp4">
+        Your browser doesn't support video playback.
+      </video>
+    </div>
+  </section>
+
+  <script>
+    // Show only the selected section
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    // Simple form submission alert
+    function submitForm(event) {
+      event.preventDefault();
+      alert("Registration Submitted Successfully!");
+      return false;
+    }
+  </script>
+</body>
+</html>

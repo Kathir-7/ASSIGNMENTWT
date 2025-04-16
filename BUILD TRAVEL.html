@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>✈️ Wander With Me | Travel Blog</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    nav {
+      background: #444;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+    .content {
+      flex: 3;
+      padding: 20px;
+      background: white;
+      margin-right: 20px;
+    }
+
+    .sidebar {
+      flex: 1;
+      padding: 20px;
+      background: #fff;
+      min-width: 200px;
+    }
+
+    .post {
+      margin-bottom: 40px;
+    }
+
+    .post img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .contact-form {
+      margin-top: 40px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌍 Wander With Me</h1>
+    <p>Sharing stories, tips, and photos from my travel adventures.</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#posts">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="content">
+      <section id="posts">
+        <div class="post">
+          <h2>🇮🇹 Exploring Rome</h2>
+          <img src="https://via.placeholder.com/800x400?text=Rome" alt="Rome">
+          <p>The Eternal City stole my heart with its rich history, amazing food, and stunning architecture. From the Colosseum to gelato at the Trevi Fountain—unforgettable!</p>
+        </div>
+
+        <div class="post">
+          <h2>🇯🇵 A Week in Kyoto</h2>
+          <img src="https://via.placeholder.com/800x400?text=Kyoto" alt="Kyoto">
+          <p>Cherry blossoms, bamboo forests, and tranquil temples—Kyoto was pure magic. Don't miss the Fushimi Inari shrine!</p>
+        </div>
+
+        <div class="post">
+          <h2>🇲🇽 Colorful Mexico City</h2>
+          <img src="https://via.placeholder.com/800x400?text=Mexico+City" alt="Mexico City">
+          <p>Vibrant culture, mouthwatering tacos, and incredible art. From Frida Kahlo’s home to floating gardens, every moment was an adventure.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-form">
+        <h2>📬 Contact Me</h2>
+        <form onsubmit="return submitMessage(event)">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </div>
+
+    <aside class="sidebar">
+      <h3>🌐 Quick Links</h3>
+      <ul>
+        <li><a href="#posts">Latest Posts</a></li>
+        <li><a href="#contact">Get in Touch</a></li>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Tips & Tricks</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>© 2025 Wander With Me | Designed with ❤️</p>
+  </footer>
+
+  <script>
+    function submitMessage(e) {
+      e.preventDefault();
+      alert("Thanks for reaching out! I’ll get back to you soon.");
+      return false;
+    }
+  </script>
+
+</body>
+</html>
+

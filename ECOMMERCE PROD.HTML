@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page - SmartWatch Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .product-title {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .price {
+      color: #e91e63;
+      font-size: 1.5rem;
+    }
+    .review-stars {
+      color: #ffc107;
+    }
+    .product-image {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .btn-buy:hover, .btn-cart:hover {
+      transform: scale(1.05);
+      transition: 0.3s ease;
+    }
+    iframe {
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <a class="navbar-brand" href="#">TechStore</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Smartwatches</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Phones</a></li>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search products">
+      <button class="btn btn-outline-light">Search</button>
+    </form>
+  </div>
+</nav>
+
+<!-- Product Section -->
+<div class="container mt-5">
+  <div class="row g-4">
+    <div class="col-md-6">
+      <img src="https://via.placeholder.com/500x400?text=SmartWatch+Pro" alt="Product Image" class="product-image w-100">
+    </div>
+    <div class="col-md-6">
+      <h2 class="product-title">SmartWatch Pro <span class="badge bg-success">New</span> <span class="badge bg-danger">-20%</span></h2>
+      <p class="price">$199.99 <del class="text-muted">$249.99</del></p>
+      <p class="review-stars">★★★★★ <span class="text-muted">(120 reviews)</span></p>
+      <ul>
+        <li>Heart Rate & Sleep Monitor</li>
+        <li>Waterproof (up to 50m)</li>
+        <li>GPS and Fitness Tracking</li>
+        <li>7-Day Battery Life</li>
+      </ul>
+      <a href="#specs" class="btn btn-outline-secondary btn-sm">See Specifications</a>
+      <a href="#related" class="btn btn-outline-info btn-sm">Related Products</a>
+
+      <div class="mt-4 d-flex gap-3">
+        <button class="btn btn-primary btn-cart">Add to Cart</button>
+        <button class="btn btn-success btn-buy" data-bs-toggle="modal" data-bs-target="#quickView">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Specs Table -->
+  <div id="specs" class="mt-5">
+    <h4>Product Specifications</h4>
+    <table class="table table-bordered">
+      <tr><th>Feature</th><th>Details</th></tr>
+      <tr><td>Size</td><td>42mm</td></tr>
+      <tr><td>Color</td><td>Black / Silver / Rose Gold</td></tr>
+      <tr><td>Material</td><td>Aluminum + Silicone Strap</td></tr>
+      <tr><td>Compatibility</td><td>iOS / Android</td></tr>
+    </table>
+  </div>
+
+  <!-- Promotional Video -->
+  <div class="mt-5">
+    <h4>Watch the Promo</h4>
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+      title="Product Promo" allowfullscreen></iframe>
+  </div>
+
+  <!-- Purchase Form -->
+  <div class="mt-5">
+    <h4>Purchase Now</h4>
+    <form>
+      <div class="row mb-3">
+        <div class="col"><input type="text" class="form-control" placeholder="Full Name" required></div>
+        <div class="col"><input type="email" class="form-control" placeholder="Email" required></div>
+      </div>
+      <div class="mb-3">
+        <select class="form-select">
+          <option selected>Select Color</option>
+          <option>Black</option>
+          <option>Silver</option>
+          <option>Rose Gold</option>
+        </select>
+      </div>
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="agree">
+        <label class="form-check-label" for="agree">
+          I agree to the <a href="#">terms and conditions</a>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-warning">Submit Order</button>
+    </form>
+  </div>
+</div>
+
+<!-- Quick View Modal -->
+<div class="modal fade" id="quickView" tabindex="-1" aria-labelledby="quickViewLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="quickViewLabel">Quick View: SmartWatch Pro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>This smartwatch features heart rate monitoring, GPS, waterproof design, and up to 7 days of battery life. Compatible with both iOS and Android.</p>
+        <ul>
+          <li>High-resolution AMOLED display</li>
+          <li>Multiple sport modes</li>
+          <li>Wireless charging support</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-success">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
